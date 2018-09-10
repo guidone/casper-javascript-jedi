@@ -43,6 +43,20 @@ into the {body} of the default.hbs template --}}
             </section>
             {{/if}}
 
+            <div id="disqus_thread" style="padding: 0px 95px;"></div>
+            <script>
+              var disqus_config = function () {
+              this.page.url = '{{url absolute="true"}}';
+              this.page.identifier = '{{id}}';
+              };
+              (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://javascripjedi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+
             <footer class="post-full-footer">
 
                 {{!-- There are two options for how we display the byline/author-info.
