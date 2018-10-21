@@ -485,7 +485,7 @@ h6 {
     font-weight: 500;
 }
 
-code.language-javascript {
+:not(pre) > code.language-javascript {
     background-color: #444444 !important;
     padding-left: 5px  !important;
     padding-right: 5px  !important;
