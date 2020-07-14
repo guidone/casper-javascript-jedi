@@ -1,0 +1,29 @@
+
+
+
+<article class="post-single {{post_class}} no-image">
+
+    <header class="post-preview-header">
+        <section class="post-preview-meta">
+            <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+            {{#primary_tag}}
+                <span class="date-divider">/</span> <a class="primary-tag" href="{{url}}">{{name}}</a>
+            {{/primary_tag}}
+        </section>
+        <a class="post-preview-title" href="{{url}}">{{title}}</a>
+    </header>
+
+    <section class="post-full-content post-preview-content">
+        <div class="post-content">
+            {{#if featured}}
+              {{content}}
+            {{else}}
+              {{content words="120"}}
+              <div class="preview-more">
+                <a href="{{url}}">more...</a>
+              </div>
+            {{/if}}
+
+        </div>
+    </section>
+</article>
